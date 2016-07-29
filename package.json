@@ -1,0 +1,35 @@
+{
+  "name": "routing-controllers-koa-demo",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Example of koa + typescript project using routing-controllers",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "author": {
+    "name": "Umed Khudoiberdiev",
+    "email": "pleerock.me@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pleerock/routing-controllers-koa-demo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pleerock/routing-controllers-koa-demo/issues"
+  },
+  "tags": [
+    "koa",
+    "typescript-koa",
+    "routing-controllers"
+  ],
+  "dependencies": {
+    "koa": "^2.0.0-alpha.4",
+    "koa-bodyparser": "^3.1.0",
+    "koa-router": "^7.0.1",
+    "reflect-metadata": "^0.1.3",
+    "routing-controllers": "^0.6.0-beta.5",
+    "typedi": "^0.4.2"
+  },
+  "devDependencies": {
+    "typescript": "^1.8.10"
+  }
+}
