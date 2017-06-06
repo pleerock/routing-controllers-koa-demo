@@ -1,14 +1,21 @@
-import { Category } from "./Category";
+import {Category} from "./Category";
 
 export class Post {
 
-    public createDate: Date = new Date();
+    id: number;
+    title: string;
+    text: string;
+    createDate: Date = new Date();
+    categories: Category[];
 
-    constructor(
-        public id: number,
-        public title: string,
-        public text: string,
-        public categories: Category[]
-    ) { }
+    constructor(id: number,
+                title: string,
+                text: string,
+                categories: Category[]) {
+        this.id = id;
+        this.title = title;
+        this.text = text;
+        this.categories = categories;
+    }
 
 }

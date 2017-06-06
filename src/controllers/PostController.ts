@@ -4,28 +4,28 @@ import {PostRepository} from "../repository/PostRepository";
 import {Post} from "../model/Post";
 
 @Service()
-@JsonController("/posts")
+@JsonController()
 export class PostController {
 
     constructor(private postRepository: PostRepository) {
     }
 
-    @Get("/")
+    @Get("/posts")
     all(): Promise<Post[]> {
         return this.postRepository.findAll();
     }
 
-    @Get("/:id")
+    @Get("/posts/:id")
     one(@Param("id") id: number): Post {
         return this.postRepository.findOne(id);
     }
 
-    @HttpPost("")
+    @HttpPost("/posts")
     post(@Body() post: Post): Post {
         return this.postRepository.save(post);
     }
 
-    @Delete("/:id")
+    @Delete("/posts/:id")
     delete(@Param("id") id: number): Post {
         return this.postRepository.remove(id);
     }
