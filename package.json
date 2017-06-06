@@ -4,10 +4,15 @@
   "version": "0.0.2",
   "description": "Example of koa + typescript project using routing-controllers",
   "license": "MIT",
-  "readmeFilename": "README.md",
   "author": {
     "name": "Umed Khudoiberdiev",
     "email": "pleerock.me@gmail.com"
+  },
+  "scripts": {
+    "start": "npm run build && node ./build/app.js",
+    "start:watch": "npm run build:watch & nodemon ./build/app.js",
+    "build": "node_modules/.bin/tsc",
+    "build:watch": "npm run build -- -w"
   },
   "repository": {
     "type": "git",
@@ -22,14 +27,21 @@
     "routing-controllers"
   ],
   "dependencies": {
-    "koa": "^2.0.0-alpha.4",
-    "koa-bodyparser": "^3.1.0",
-    "koa-router": "^7.0.1",
-    "reflect-metadata": "^0.1.3",
-    "routing-controllers": "^0.6.3",
-    "typedi": "^0.4.2"
+    "koa": "2.2.0",
+    "koa-bodyparser": "4.2.0",
+    "koa-router": "7.2.0",
+    "multer": "1.3.0",
+    "reflect-metadata": "0.1.10",
+    "routing-controllers": "0.7.0-alpha.14",
+    "typedi": "0.5.2"
   },
   "devDependencies": {
-    "typescript": "^1.8.10"
+    "@types/koa": "2.0.39",
+    "@types/koa-bodyparser": "3.0.23",
+    "@types/koa-router": "7.0.22",
+    "@types/multer": "0.0.33",
+    "@types/node": "7.0.22",
+    "nodemon": "1.11.0",
+    "typescript": "2.3.3"
   }
 }
