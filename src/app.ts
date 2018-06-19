@@ -16,7 +16,7 @@ useContainer(Container);
 const koaApp = createKoaServer({
     /**
      * We can add options about how routing-controllers should configure itself.
-     * Here we specify what controllers should be registered in our express server.
+     * Here we specify what controllers should be registered in our koa server.
      */
     controllers: [
         CategoryController,
